@@ -9,6 +9,7 @@ module.exports = function(source, inputSourceMap) {
     }
 
     var opts = this.options['uglify-loader'] || {};
+    opts.inSourceMap = inputSourceMap;
     // just an indicator to generate source maps, the output result.map will be modified anyway
     opts.outSourceMap = "out.map.js";
     opts.fromString = true;
